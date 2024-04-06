@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Footer = styled.footer`
+  padding: 1rem;
   font-size: 14px;
   margin-top: auto;
   margin-bottom: 0;
@@ -11,8 +12,7 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media all and (max-width: 660px) { padding-inline: 5%;}
-
+  
   min-height: 200px;
 `;
 
@@ -22,10 +22,8 @@ export const RowWrap = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: 67%;
-  @media all and (max-width: 960px) { width: 80%; }
-  @media all and (max-width: 660px) { width: 100%; }
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1200px;
 `;
 
 export const FirstRow = styled.div`
@@ -39,12 +37,11 @@ export const FirstRow = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   .logo-wrap {
     margin-bottom: 25px;
-    //.logo { font-size: 75px; }
   } 
   .links {
     margin-bottom: 25px;
 
-    @media all and (max-width: 620px) {
+    @media all and (max-width: 767px) {
       display: flex;
       flex-direction: column;
     }
@@ -88,7 +85,7 @@ export const SecondRow = styled.div`
       padding-inline: 10px;
     }
 
-    @media all and (max-width: 620px) {
+    @media all and (max-width: 767px) {
       display: flex;
       flex-direction: column;
     }

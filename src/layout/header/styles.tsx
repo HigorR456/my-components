@@ -1,24 +1,22 @@
 import styled from "styled-components";
 
-export const Header = styled.header<show: boolean>`
-  padding: 1rem;
-  font-weight: 500;
+export const Header = styled.header<{show: boolean}>`
+  display: flex;
+  justify-content: center;
   position: fixed;
   z-index: 10;
   width: 100%;
   height: 60px;
   top: 0;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+  padding: 1rem;
+  
   background: white;
+  font-weight: 500;
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
   transition: .3s;
 
   ${(props) => props.show && `
-    div {
+    .menuwrap {
       display: block;
 
       .menu-icon {
@@ -60,14 +58,18 @@ export const Header = styled.header<show: boolean>`
   `}
 `;
 
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+`;
+
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
   gap: 20px;
-
-  @media all and (max-width: 620px) {
-      display: none;
-  }
 
   ul {
     display: flex;
@@ -102,12 +104,16 @@ export const Nav = styled.nav`
       }
     }
   }
+
+  @media all and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const MenuWrap = styled.div`
   display: none;
 
-  @media all and (max-width: 620px) {
+  @media all and (max-width: 767px) {
     display: block;
   }
 
@@ -130,7 +136,7 @@ export const MenuWrap = styled.div`
   }
 `;
 
-export const HeaderLogoWrap = styled.div`
+export const LogoWrap = styled.div`
   color: #606060;
   cursor: pointer;
 
