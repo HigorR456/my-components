@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Footer = styled.footer`
   padding: 1rem;
-  font-size: 14px;
   margin-top: auto;
   margin-bottom: 0;
 

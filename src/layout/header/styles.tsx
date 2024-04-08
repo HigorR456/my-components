@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 export const Header = styled.header<{show: boolean}>`
@@ -5,7 +6,7 @@ export const Header = styled.header<{show: boolean}>`
   justify-content: center;
   position: fixed;
   z-index: 10;
-  width: 100%;
+  width: calc(100% - 2rem);
   height: 60px;
   top: 0;
   padding: 1rem;
@@ -32,13 +33,13 @@ export const Header = styled.header<{show: boolean}>`
       padding: 1rem;
       display: block;
       height: 100vh;
-      width: 100%;
+      width: calc(100% - 2rem);
       background: white;
       transition: .3s;
 
       position: absolute;
-      border-top: 1px solid #606060;
-      top: 60px;
+      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3) inset;
+      top: 92px;
 
       animation: menu-transition .3s forwards;
 
@@ -49,7 +50,7 @@ export const Header = styled.header<{show: boolean}>`
 
       ul {
         flex-direction: column;
-        margin-top: 60px;
+        margin-top: 92px;
         gap: 30px;
 
         li { width: 80px; }
@@ -136,9 +137,9 @@ export const MenuWrap = styled.div`
   }
 `;
 
-export const LogoWrap = styled.div`
+export const LogoWrap = styled(Link)`
+  text-decoration: none;
   color: #606060;
-  cursor: pointer;
 
   &:hover { color: #202020; }
   &:active { color: black; }

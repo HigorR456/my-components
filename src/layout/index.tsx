@@ -4,7 +4,6 @@ import Main from "./main";
 import { LayoutWrapper } from "./styles";
 
 export default function Layout({children}: any) {
-
   return (
     <LayoutWrapper>
       <Header />

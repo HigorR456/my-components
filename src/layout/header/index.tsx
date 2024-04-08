@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <Style.Header show={showMenu}>
       <Style.Wrapper>
-      <Style.LogoWrap>
+      <Style.LogoWrap href="/">
         LOGO HERE
       </Style.LogoWrap>
 

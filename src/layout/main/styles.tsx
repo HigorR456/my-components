@@ -4,8 +4,8 @@ export const Main = styled.main`
   display: flex;
   justify-content: center;
   position: relative;
-  top: 60px;
-  width: 100%;
+  margin-top: 92px;
+  width: calc(100% - 2rem);
   padding: 1rem;
 `;
 
